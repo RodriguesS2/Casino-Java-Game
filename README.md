@@ -5,6 +5,12 @@ Blackjack Royale is a text-based casino application where you can play a game se
 
 This project was developed by Sebastião Vizcaíno (up202305009), Tobias Blechschmidt (up202401393) and Rafael Rodrigues (up202303855) for LDTS 2024/25.
 
+Game developed in Java 21.
+
+## Controls: 
+  H - hit
+  S - stay
+
 For a more detailed version of this description click [here](./docs/README.md)
 
 ## Screenshots 
