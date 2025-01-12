@@ -1,0 +1,49 @@
+plugins {
+    id 'java'
+    id 'info.solidsoft.pitest' version '1.15.0'
+    id 'application'
+}
+
+group 'casino.game'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = '21'
+targetCompatibility = '21'
+
+repositories {
+    mavenCentral()
+}
+
+pitest {
+    junit5PluginVersion = '1.2.1'
+    excludedClasses = [
+            'casino.game.Casino',
+            'casino.game.gui.*'
+    ]
+}
+
+application {
+    mainClass = 'casino.game.Casino'
+}
+
+dependencies {
+    implementation group: 'com.googlecode.lanterna', name: 'lanterna', version: '3.1.1'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+    testImplementation 'org.mockito:mockito-core:3.7.7'
+    testImplementation 'org.spockframework:spock-core:2.0-groovy-3.0'
+    testImplementation 'org.codehaus.groovy:groovy-all:3.0.21'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    testImplementation 'net.jqwik:jqwik:1.5.1'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-params:5.10.0'
+
+    //errorprone("com.google.errorprone:error_prone_core:2.36.0")
+}
+
+test {
+    useJUnitPlatform {
+        includeEngines('junit-jupiter', 'jqwik')
+    }
+}
