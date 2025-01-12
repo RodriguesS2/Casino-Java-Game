@@ -7,11 +7,13 @@ This project was developed by Sebastião Vizcaíno (up202305009), Tobias Blechsc
 
 Game developed in Java 21.
 
+For a more detailed version of this description click [here](./docs/README.md)
+
 ## Controls: 
   H - hit
+  
   S - stay
 
-For a more detailed version of this description click [here](./docs/README.md)
 
 ## Screenshots 
 
